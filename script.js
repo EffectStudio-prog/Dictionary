@@ -55,7 +55,7 @@ const SendRequest = async () => {
         const response = await request.json();
         if (!request.ok) {
             console.log(`Malumotlar topilmadi !`);
-            resultDiv.innerHTML = `<li style="color:red;background-color:white">Malumotlar topilmadi !</li>`;
+            resultDiv.innerHTML = `<li style="color:red;background-color:white">Info Error !</li>`;
             return;
         } else {
             const wordData = response[0];
