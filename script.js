@@ -35,7 +35,7 @@ const SendRequest = async () => {
     const searchQuery = input.value.trim();
     if (!searchQuery) {
         console.log(`%cEmpty input !`, 'font-weight:bold;color:red;');
-        resultDiv.innerHTML = `<li style="color:red;text-align:center;font-weight:700;background-color:white">No data !<br>Empty input !</li>`;
+        resultDiv.innerHTML = `<li style="color:red;text-align:center;font-weight:700;background-color:white">Data not found!<br>Empty input !</li>`;
         return;
     }
     console.log(`You request send to the server : ${searchQuery} !`);
@@ -54,7 +54,7 @@ const SendRequest = async () => {
         console.log(`%cResponse send server to ${resultTime}s !`, 'font-weight:bold;color: rgb(36, 232, 36);');
         const response = await request.json();
         if (!request.ok) {
-            console.log(`Malumotlar topilmadi !`);
+            console.log(`Info Error !`);
             resultDiv.innerHTML = `<li style="color:red;background-color:white">Info Error !</li>`;
             return;
         } else {
