@@ -1,10 +1,10 @@
-// Elements !
+// Elements 
 const input = document.querySelector("#input");
 const searchButton = document.querySelector("#search");
 const deleteButton = document.querySelector("#delete");
 const resultDiv = document.querySelector("#results");
 
-// Key function !
+// Key function 
 document.addEventListener('keydown', function(event) {
     if(event.key === 'Enter') {
         searchButton.click();
@@ -14,7 +14,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Input codes ! 
+// Input codes
 input.addEventListener('input', function() {
     if(input.value.length != 0) {
         deleteButton.style.display = 'block';
@@ -23,14 +23,14 @@ input.addEventListener('input', function() {
     }
 });
 
-// Delete Button codes !
+// Delete Button codes 
 deleteButton.addEventListener('click', function() {
     input.value = '';
     deleteButton.style.display = 'none';
 });
 
-// Server codes !
-// Request to the server !
+// Server codes 
+// Request to the server 
 const SendRequest = async () => {
     const searchQuery = input.value.trim();
     if (!searchQuery) {
@@ -82,8 +82,7 @@ const SendRequest = async () => {
         console.log(`Error data : `, err);
     }
 };
-
-// Search button codes !
+// Search button codes 
 searchButton.addEventListener('click', function() {
     SendRequest();
 });
