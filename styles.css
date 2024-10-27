@@ -21,12 +21,6 @@ body {
     height: 100vh;
 }
 
-.top{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 /* Main container */
 .container {
     max-width: 600px;
